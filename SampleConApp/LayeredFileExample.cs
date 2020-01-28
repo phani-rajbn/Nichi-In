@@ -42,7 +42,8 @@ namespace SampleConApp
         }
         public void AddNewEmployee(int id, string name, string address, double salary)
         {
-            throw new NotImplementedException();
+            string line = $"{id},{name},{address},{salary}\n";
+            File.AppendAllText(filename, line);
         }
 
         public void DeleteEmployee(int id)
@@ -79,7 +80,7 @@ namespace SampleConApp
         static IEmpDatabase db = new EmpFileDB();
         public void AddNewEmployee(Employee emp)
         {
-            throw new NotImplementedException();
+            db.AddNewEmployee(emp.EmpID, emp.EmpName, emp.EmpAddress, emp.EmpSalary);
         }
 
         public void DeleteEmployee(int id)
@@ -120,6 +121,7 @@ namespace SampleConApp
             IEmpBO db = new EmpBOComponent();
             var records = db.GetAllEmployees();
             foreach (var emp in records) Console.WriteLine(emp.EmpName);
+            //db.AddNewEmployee(new Employee { EmpID = 1002, EmpName = "Gopal", EmpSalary = 45000, EmpAddress = "Pune" });
         }
     }
 }
