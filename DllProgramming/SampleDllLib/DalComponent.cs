@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.Configuration;
+using System;
 
 namespace SampleDllLib
 {
@@ -97,9 +99,10 @@ namespace SampleDllLib
     {
         public static IEmpDatabase GetComponent()
         {
-            return new EmpFileDB();
+            //string classname = ConfigurationManager.AppSettings["DalComponent"];
+            //var component = Activator.CreateInstance(Type.GetType(classname));
+            //return component as IEmpDatabase;
+            return new SerializationComponent();
         }
-
-        
     }
 }
