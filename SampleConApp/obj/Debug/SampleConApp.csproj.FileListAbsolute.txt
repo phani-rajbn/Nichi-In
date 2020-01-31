@@ -1,0 +1,9 @@
+B:\Programs\NichiIn-2020\Nichi-InTraining\SampleConApp\bin\Debug\SampleConApp.exe.config
+B:\Programs\NichiIn-2020\Nichi-InTraining\SampleConApp\bin\Debug\SampleConApp.exe
+B:\Programs\NichiIn-2020\Nichi-InTraining\SampleConApp\bin\Debug\SampleConApp.pdb
+B:\Programs\NichiIn-2020\Nichi-InTraining\SampleConApp\obj\Debug\SampleConApp.Properties.Resources.resources
+B:\Programs\NichiIn-2020\Nichi-InTraining\SampleConApp\obj\Debug\SampleConApp.csproj.GenerateResource.cache
+B:\Programs\NichiIn-2020\Nichi-InTraining\SampleConApp\obj\Debug\SampleConApp.csproj.CoreCompileInputs.cache
+B:\Programs\NichiIn-2020\Nichi-InTraining\SampleConApp\obj\Debug\SampleConApp.exe
+B:\Programs\NichiIn-2020\Nichi-InTraining\SampleConApp\obj\Debug\SampleConApp.pdb
+B:\Programs\NichiIn-2020\Nichi-InTraining\SampleConApp\obj\Debug\SampleConApp.csprojAssemblyReference.cache

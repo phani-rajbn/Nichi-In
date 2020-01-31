@@ -48,7 +48,28 @@ namespace SampleConApp
 
         public void DeleteEmployee(int id)
         {
-            throw new NotImplementedException();
+            GetAllEmployees();//To get the fresh data...
+            foreach(DataRow row in table.Rows)
+            {
+                if(row[0].ToString() == id.ToString())
+                {
+                    row.Delete();
+                    table.AcceptChanges();
+                    break;
+                }
+            }
+            saveRecords();//This will overwrite the file with new data....
+        }
+
+        private void saveRecords()
+        {
+            List<string> lines = new List<string>();
+            foreach(DataRow row in table.Rows)
+            {
+                var line = $"{row[0]},{row[1]},{row[2]},{row[3]}";
+                lines.Add(line);
+            }
+            File.WriteAllLines(filename, lines);
         }
 
         public DataTable GetAllEmployees()
@@ -71,7 +92,20 @@ namespace SampleConApp
 
         public void UpdateEmployee(int id, string name, string address, double salary)
         {
-            throw new NotImplementedException();
+            GetAllEmployees();
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                DataRow r = table.Rows[i];
+                if(r[0].ToString() == id.ToString())
+                {
+                    r[1] = name;
+                    r[2] = address;
+                    r[3] = salary;
+                    table.AcceptChanges();
+                    break;
+                }
+            }
+            saveRecords();
         }
     }
 
@@ -83,9 +117,10 @@ namespace SampleConApp
             db.AddNewEmployee(emp.EmpID, emp.EmpName, emp.EmpAddress, emp.EmpSalary);
         }
 
+
         public void DeleteEmployee(int id)
         {
-            throw new NotImplementedException();
+            db.DeleteEmployee(id);
         }
 
         public List<Employee> GetAllEmployees()
@@ -110,7 +145,7 @@ namespace SampleConApp
 
         public void UpdateEmployee(Employee emp)
         {
-            throw new NotImplementedException();
+            db.UpdateEmployee(emp.EmpID, emp.EmpName, emp.EmpAddress, emp.EmpSalary);
         }
     }
 
@@ -118,9 +153,15 @@ namespace SampleConApp
     {
         static void Main(string[] args)
         {
-            IEmpBO db = new EmpBOComponent();
-            var records = db.GetAllEmployees();
-            foreach (var emp in records) Console.WriteLine(emp.EmpName);
+            IEmpDatabase dbo = new EmpFileDB();
+            //dbo.DeleteEmployee(5);
+            dbo.UpdateEmployee(1, "Phaniraj", "Bangalore", 45000);
+            //var records = dbo.GetAllEmployees();
+            //foreach (DataRow row in records.Rows) Console.WriteLine(row[1]);
+
+            //IEmpBO db = new EmpBOComponent();
+            //var records = db.GetAllEmployees();
+            //foreach (var emp in records) Console.WriteLine(emp.EmpName);
             //db.AddNewEmployee(new Employee { EmpID = 1002, EmpName = "Gopal", EmpSalary = 45000, EmpAddress = "Pune" });
         }
     }
