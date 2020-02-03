@@ -1,0 +1,9 @@
+Create a Food Distribution App using C# Windows Application to store Restaurants and menu for each restaurant. U shall store the data in the form of serialization collection class only. There is no scope of any external database.
+The Following components are required:
+Restaurant and its Information like:RestaurantID, Name, OwnerName, RegistrationDate, Location
+Menu: MenuID, RestaurantID, List<MenuItem>
+MenuItem: ItemID, Name, Price, Duration.
+
+The Application should allow users to register new restaurants and upload the Menu to a given restaurant in the form of CSV File. 
+Application should allow Customers to view Restaurants and find the menu matching to the restaurant. 
+  
