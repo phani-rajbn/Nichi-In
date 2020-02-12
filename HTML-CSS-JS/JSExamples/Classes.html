@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		button{
+			margin: 10px;
+		}
+	</style>
+	<script src="Classes.js"></script>
+	<script src="Common.js"></script>
+	<script type="text/javascript">
+		function setDetails(){
+			emp.empId = $("txtId").value;
+			emp.empName = $("txtName").value;
+			emp.empAddress = $("txtAddress").value;
+		}
+		function display(){
+			//2nd function to read the data and display it in the span elements
+			$("name").innerText = emp.empName;
+			$("address").innerText = emp.empAddress;
+			$("empId").innerText = emp.empId;
+		}
+		function init(){
+			/*var btn = $("btnRegister");
+			btn.addEventListener("click", setDetails);*/
+			$click("btnRegister", setDetails);
+			$click("btnShow", display);
+		}
+		window.addEventListener("load", init);//mapping the events with handlers. 
+	</script>
+</head>
+<body>
+	<div>
+		<h1>Set Employee Details</h1>
+		<p>EmpID:<input id="txtId"></p>
+		<p>EmpName:<input id="txtName"></p>
+		<p>EmpAddress:<input id="txtAddress"></p>
+		<p>
+			<button id="btnRegister">Register</button>
+			<button id="btnShow">Show Details</button>
+		</p>
+	</div>
+	<div>
+		<h1>Employee details</h1>
+		<p>The Name:<span id="name"></span></p>
+		<p>The Address:<span id="address"></span></p>
+		<p>The ID:<span id="empId"></span></p>
+	</div>
+</body>
+</html>

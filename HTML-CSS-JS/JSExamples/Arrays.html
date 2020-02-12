@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays Example</title>
+	<script>
+		/*First Example.......................
+		var example = ['apple','mango','orange','banana'];
+		var index =0;
+		while(index < example.length){
+			console.log(example[index]);
+			index++;
+		}*/
+		var fruits = ["Apples","Mangoes","Oranges"];//blank Array.....
+		function fillRecords(data){
+			var ul = document.getElementById("lstFruits");
+			ul.innerHTML = "";
+			for (var i = 0; i < data.length; i++) {
+				var li = "<li>" + data[i] + "X</li>";
+				ul.innerHTML += li;
+			}
+		}
+		function find(){
+			var search = document.getElementById('newFruit').value;
+			//arrays have a function called filter which takes a predicate that defines the criteria of filtering the elements in the array....
+			var data = fruits.filter((f)=>f.includes(search));
+			fillRecords(data);
+		}
+		function onDelete(){
+			//get the text to delete.
+			var name = document.getElementById("newFruit").value;
+			for (var i = 0; i < fruits.length; i++) {
+				if(fruits[i] == name){
+					fruits.splice(i, 1);
+					break;
+				}
+			}
+			fillRecords(fruits);
+		}
+		function onAddNew(){
+			var fruitName = document.getElementById("newFruit").value;
+			fruits.push(fruitName);//adds the element to the bottom of the Array....
+			fillRecords(fruits);
+		}
+		//fillRecords(fruits);
+	</script>
+</head>
+<body>
+	<div>
+		<input id="newFruit" onchange="find()" placeholder="Add a Fruit Here">
+		<button onclick="onAddNew()">+</button>
+		<button onclick="onDelete()">X</button>
+		<br/>
+		<ul id="lstFruits">
+		</ul>
+	</div>
+</body>
+</html>

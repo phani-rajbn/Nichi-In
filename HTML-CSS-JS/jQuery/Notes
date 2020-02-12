@@ -1,0 +1,8 @@
+What is jQuery? 
+Its a JS Library for developing rich internet interactive web content with less code and more productivity. jquery is nothing but JS with some set of APIs that help in manipulating the DOM structure with less code. 
+jquery can be downloaded in a minified version so that it will be less in size and quick in downloading. .min.js will the kind of the file. 
+jquery helps in manipulating the DOM elements using selectors. These selectors are similar to the CSS selectors: Element(Tag), ClassName, ID. 
+How to write jQuery Apps? 
+U need to download the jQuery lib js file from the jQuery website. Alternatively u could use the CDN of various vendors like Google, MS, jQuery itself. Content Delivery Network is a group of servers across the globe where jQuery would be available, the internet will find the nearest server and download jQuery from it. 
+U should refer this jQuery file in every HTML doc that U wish to use it like any other JS files U were embedding inside the HTML Docs. 
+$ is the shortcut for jQuery lib. The jQuery looks for a selector. In this case, its document object. ready function is a function that is called when the whole document is loaded into the browser. The ready function looks for a callback function that tells what needs to be done once the document is loaded. 

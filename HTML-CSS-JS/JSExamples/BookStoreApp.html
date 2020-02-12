@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BookStore App</title>
+	<link rel="stylesheet" type="text/css" href="../Content/mainStyle.css">
+	<script src="Classes.js"></script>
+	<script src="Common.js"></script>
+	<script type="text/javascript">
+		var bookDB = new bookStore();
+		function populateBooks(){
+			$("tbl").innerHTML = "<tr><th>Book ID</th><th>Book Title</th><th>Book Author</th><th>Book Price</th><th>Options</th></tr>";
+			var books = bookDB.getAll();
+			var tbl = $("tbl");
+			books.forEach(function(bk){
+				var tr = "<tr><td>" + bk.bookId +"</td><td>";
+				tr += bk.title + "</td><td>";
+				tr += bk.author + "</td><td>";
+				tr += bk.price + "</td><td>";
+				tr +="<a class='edit' myid =" + bk.bookId + " href='#'>Edit</a></td></tr>"
+				tbl.innerHTML += tr;
+			});
+			addEvent(document.getElementsByClassName("edit"), function(){
+					//var id = this.parentNode.parentNode.children[0].innerText;
+					var id = this.getAttribute("myid");
+					var b = bookDB.find(id);
+					$("txtOldId").value = id;
+					$("txtOldAuthor").value = b.author;
+					$("txtOldTitle").value = b.title;
+					$("txtOldPrice").value = b.price;
+				})
+
+
+
+		}
+		window.addEventListener("load", function(){
+			populateBooks();
+			$click("btnSave", function(){
+				//get the values
+				var id = $("txtId").value;
+				var title = $("txtTitle").value;
+				var author = $("txtAuthor").value;
+				var price = $("txtPrice").value;
+				//create the book object
+				var bk = new book(id, title, price, author);
+				//pass the book object into the function of addNewBook
+				bookDB.addBook(bk);
+				//repopulate the table...
+				populateBooks();	
+			})
+			$click("btnUpdate", function(){
+				//get the values
+				var id = $("txtOldId").value;
+				var title = $("txtOldTitle").value;
+				var author = $("txtOldAuthor").value;
+				var price = $("txtOldPrice").value;
+				//create the book object
+				var bk = new book(id, title, price, author);
+				//pass the book object into the function of addNewBook
+				bookDB.update(bk);
+				//repopulate the table...
+				populateBooks();	
+			})
+		});
+	</script>
+</head>
+<body>
+	<nav>
+		<a href="#">Show Books</a> 
+		<a href="#">Add New Book</a> 
+		<a href="#">About Us</a> 
+	</nav>
+	<div>
+		<h1>Sapna Book House</h1>
+		<hr/>
+		<div class="table">
+			<table id="tbl" border="1" width="100%">
+				
+			</table>
+		</div>
+		<div class="block">
+			<h1>Register for New Book</h1>
+			<p>
+				<input type="number" id="txtId" placeholder="Enter ID">
+				<input type="text" id="txtTitle" placeholder="Enter Title">
+				<input type="number" id="txtPrice" placeholder="Enter Price">
+				<input type="text" id="txtAuthor" placeholder="Enter Author">
+				<button id="btnSave">Save Changes</button>
+			</p>
+		</div>
+		<div class="block">
+			<h1>Update old Book</h1>
+			<p>
+				<input type="number" id="txtOldId" placeholder="Enter ID">
+				<input type="text" id="txtOldTitle" placeholder="Enter Title">
+				<input type="number" id="txtOldPrice" placeholder="Enter Price">
+				<input type="text" id="txtOldAuthor" placeholder="Enter Author">
+				<button id="btnUpdate">Update</button>
+			</p>
+		</div>
+		
+	</div>
+</body>
+</html>

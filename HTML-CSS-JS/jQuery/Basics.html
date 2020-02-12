@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQUERY EXAMPLES</title>
+	<link rel="stylesheet" type="text/css" href="./lib/mainStyle.css">
+	<script src="./lib/jquery.min.js"></script>
+	<script>
+		$(document).ready(()=>{
+			$("div").click(function(){
+				$(this).css("background-color", "blue");
+				$(this).hide(2000);
+			})
+			$("a:first").click(()=>{
+				$("div").show(2000);
+			})
+			$("a:last").click(()=>{
+				$("div").hide(2000);
+			})			
+		})
+	</script>
+</head>
+<body>
+	<center>
+	<p><a href="#">Show All</a><a href="#">Hide All</a></p>
+	</center>
+	<div>
+		<h1>Div1</h1>
+	</div>
+	<div>
+		<h1>Div2</h1>
+	</div>
+	<div>
+		<h1>Div3</h1>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="./lib/repository.js"></script>
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script>
+		let list = new empDatabase();
+		function hideAll(){
+			$(".mainTable").slideUp(2000);
+			$(".addRec").slideUp(2000);
+		}
+
+		function populate(){
+			let data = list.getAll();
+			//This is the foreach of jQuery...
+			$("table").find("tr:gt(0)").remove();
+			$.each(data, (i, e)=>{
+				let r = "<tr><td>" + e.empId + "</td><td>";
+				r += e.empName + "</td><td>";
+				r += e.empAddress + "</td><td>";
+				r += "<a href='#' class='edit' myId = " + e.empId + ">Edit</a></td><td>";
+				$("table").append(r);
+
+			})
+			$(".edit").click(function(){
+					let id = $(this).attr("myId");
+					let temp = list.findEmp(id);
+					$("#txtOldId").val(temp.empId);
+					$("#txtOldName").val(temp.empName);
+					$("#txtOldAddress").val(temp.empAddress);
+				});
+				$("button:first").click(()=>{
+					alert("Updating do it urself....");
+				})
+		}
+		$(document).ready(()=>{
+			hideAll();
+			$("a:eq(1)").click(()=>{
+				hideAll();
+				$(".addRec").slideDown(2000);	
+			})
+			$("button:eq(1)").click(()=>{
+					let id = $("#txtId").val();
+					let name = $("#txtName").val();
+					let addr = $("#txtAddress").val();
+					const emp = new employee(id, name, addr);
+					list.addEmployee(emp);
+					alert("Employee added successfully");
+					hideAll();
+				});	
+			$("a:first").click(()=>{
+				hideAll();
+				$(".mainTable").slideDown(2000);	
+				populate();
+			})
+			
+			/*const emp = new employee(123, "Phaniraj", "Bangalore");
+			//If U create a variable that will not be modified, u could use const keyword...
+			$("#txtId").val(emp.empId);
+			$("#txtName").val(emp.empName);
+			$("#txtAddress").val(emp.empAddress);*/
+
+			/*$("button").click(()=>{
+				let id = $("#txtId").val();
+				let name = $("#txtName").val();
+				let addr = $("#txtAddress").val();
+				const emp = new employee(id, name, addr);
+				let content = "The EmpID: " + emp.empId + "<br/>";
+				content += "The Name: " + emp.empName + "<br/>";
+				content += "The Address: " + emp.empAddress + "<br/>";
+				$("p:last").html(content);
+			})*/
+
+		});
+	</script>
+</head>
+<body>
+		<h1 class="jumbotron">Employee Monitoring System</h1>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <ul class="nav nav-pills">
+      <li><a href="#">Show All</a></li>
+      <li><a href="#">Add New Employee</a></li>
+    </ul>
+  </div>
+</nav>
+	<hr/>
+	<div class="row mainTable">
+		<div class="col-lg-6">
+			<h1>List of Employees with Us</h1>
+			<table class="table table-bordered table-condensed table-hover">
+				<tr>
+					<th>EmpID</th>
+					<th>EmpName</th>
+					<th>EmpAddress</th>
+					<th>Options</th>
+				</tr>
+			</table>
+		</div>
+	<div class="col-lg-5">
+			<h1>Update Employee</h1>
+			<p><input class="form-control" type="number" id="txtOldId" placeholder="Employee ID"></p>
+			<p><input class="form-control" id="txtOldName" placeholder="Employee Name"></p>
+			<p><input class="form-control" id="txtOldAddress" placeholder="Employee Address"></p>
+			<p><button class="btn btn-danger">Update</button></p>
+		</div>		
+	</div>
+	<div class="col-lg-7 addRec">
+			<h1>Create Employee</h1>
+			<p><input class="form-control" type="number" id="txtId" placeholder="Employee ID"></p>
+			<p><input class="form-control" id="txtName" placeholder="Employee Name"></p>
+			<p><input class="form-control" id="txtAddress" placeholder="Employee Address"></p>
+			<p><button class="btn btn-danger">Create</button></p>
+		</div>
+	<p>
+		
+	</p>
+</body>
+</html>

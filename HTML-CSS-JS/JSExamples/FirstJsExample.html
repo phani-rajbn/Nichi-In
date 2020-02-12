@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Examples</title>
+	<script>
+		/***********Hellow World Example****************
+		alert('hellow world');
+		name = prompt("What is UR Name");
+		answer = confirm("R U sure?");
+		alert(name);
+		alert(answer)*/
+		/**************Data Types Example****************		
+		var example = 123;
+		console.log(typeof(example));
+		var name = "phaniraj";
+		console.log(typeof(name));
+		var address ="Bangalore";
+		console.log(typeof(name));
+		var age = 43;
+		console.log(typeof(age));
+		var salary = 45000;
+		console.log(typeof(salary));
+		var isMale = true;
+		console.log(typeof(isMale));
+		**********SimpleTask Example************
+		var name = prompt("Enter UR Name")
+		var address = prompt("Enter UR address")
+		var salary = prompt("Enter UR Salary")
+		var details = "The Name entered is " + name +"\nThe Address entered is " + address + "\nThe Salary entered is " + salary
+		alert(details)
+		***********using ;***********	
+		var apple = "Fruit"
+		var tomato = "vegetable"
+		*******************************/
+		/*console.log("123" == 123);//true...
+		console.log("123" === 123);//false...*/
+
+		function onClick(){
+			var first = parseFloat(document.getElementById("first").value);
+			var second = parseFloat(document.getElementById("second").value);
+			var operator = document.getElementById("selector").value;
+			var result = 0.0;
+			if(operator == "+")
+				result = first + second;
+			else if(operator == "-")
+					result = (first - second);
+			else if(operator == "*")
+					result = (first * second);
+			else if(operator == "/")
+				result = (first / second);
+			document.getElementById("result").innerHTML = "<b>" + result + "</b>";
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<h1>My Math Calc</h1>
+		<input id= "first" type="number" placeholder="Enter First Value"/>
+		<select id="selector">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+		</select>	
+		<input id= "second" type="number" placeholder="Enter Second Value"/>
+		<button onclick="onClick()">=</button>
+		<span id="result"></span>
+	</div>
+</body>
+</html>

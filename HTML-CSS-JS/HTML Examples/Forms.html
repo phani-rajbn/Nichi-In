@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+	<link rel="stylesheet" type="text/css" href="Content/mainStyle.css">
+</head>
+<body>
+	<h1>Forms in HTML</h1>
+	<p>
+		A Web Form is more like a page that takes inputs from the User to store and perform certain operations. This could for registration, nomination, booking or any such operation where the user will provide the inputs to be used by the HTML Application.
+	</p>
+	<form>
+		<h1>Employee Registration Form</h1>
+		<p>
+			<label for="empId">Enter the Emp ID</label>
+			<input type="number" min="1000" max="10000" id="empId" placeholder="Enter the ID">
+		</p>
+		<p>
+			<label for="empName">Enter the Emp Name</label>
+			<input type="text" id="empName" required placeholder="Enter the Name">
+		</p>
+		<p>
+			<label for="empAddress">Enter the Email Address</label>
+			<input type="email" id="empAddress" required placeholder="Enter the Email">
+		</p>
+		<p>
+			<label for="doj">Enter the Date of Join</label>
+			<input type="date" id="doj"  placeholder="Enter the Date of Join">
+		</p>
+		<p>
+			Select UR Qualification:
+			<select id="slList">
+				<option>School</option>
+				<option>PreUniversity</option>
+				<option>Under Graduation</option>
+				<option>Graduation</option>
+				<option>Post Graduation</option>
+				<option>Research</option>
+			</select>	
+		</p>
+		<p>
+			Enter the Preferencial place of work:
+			<input type="text" list="cities" id="placeOfWork">
+			<datalist id="cities">
+				<option>Bangalore</option>
+				<option>Mysore</option>
+				<option>Pune</option>
+				<option>Kolkata</option>
+				<option>Hyderabad</option>
+				<option>Chennai</option>
+			</datalist>
+		</p>
+		<button type="submit">Register</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KSCA Ticket management</title>
+	<script src="Common.js"></script>
+	<script src="Assignment.js"></script>
+	<script>
+		function updateDisplay(t1){
+			$("display").innerHTML = "<p><b>The Name:" + t1.name + "</b></p>";
+			$("display").innerHTML += "<p><b>Match Date:" + t1.matchDate + "</b></p>";
+			$("display").innerHTML += "<p><b>Booking Date:" + t1.bookingDate + "</b></p>";
+			$("display").innerHTML += "<p><b>Stand:" + t1.standName + "</b></p>";
+			$("display").innerHTML += "<p><b>Price:" + t1.price + "</b></p>";	
+		}
+
+		function display(){
+			var id = $("txtId").value;
+			var name = $("txtName").value;
+			var booking = $("txtDate").value;
+			var match = $("txtMatch").value;
+			var stand = $("dpstand").value;
+			var t1 = new ticket(id, name, booking, match, stand);
+			t1.price = setPrice(stand);
+			$("spPrice").innerText = "Rs. " + t1.price;
+			updateDisplay(t1);
+		}
+		function setPriceAmount(){			
+				var stand = $("dpstand").value;
+				var price = setPrice(stand);
+				$("spPrice").innerText = "Rs. " + price;
+		}
+		function init(){
+			$("txtMatch").value = displayDate(new Date(2020, 1, 22));
+			$click("btnSave", display);
+			$click("dpstand", setPriceAmount);
+		}
+		window.addEventListener("load", init);
+	</script>
+</head>
+<body>
+	<h1>KSCA Ticket management Software</h1>
+	<hr/>
+	<div>
+		<h2>New Ticket Booking Window</h2>
+		<p><input id="txtId" placeholder="Enter the Ticket No"></p>
+		<p><input id="txtName" placeholder="Enter the Ticket Holder Name"></p>
+		<p><input id="txtDate" type="date" placeholder="Enter the Date"></p>
+		<p><input id="txtMatch" type="date" placeholder="Enter the Date" value = 
+			></p>
+		<p>
+			<select id="dpstand">
+				<option>Gallery</option>
+				<option>Pavillion</option>
+				<option>GRV Stand</option>
+				<option>CubbonPark</option>
+			</select>
+		</p>
+		<p>Price : <span id="spPrice"></span></p>
+		<button id="btnSave">Save Ticket</button>
+	</div>
+	<div>
+		<p id="display"></p>
+	</div>	
+</body>
+</html>

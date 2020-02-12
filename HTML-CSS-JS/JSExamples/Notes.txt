@@ -1,0 +1,47 @@
+JS is a client side scripting language used for creating dynamic content within an HTML Document. 
+It is simple and easy to develop. As the scripts are executed on the client's machine, it is called as Client side Scripting language. 
+JS needs a browser thro which U could run the scripts. It means that the JS file should be always a part of the HTML Document. That Document is viewed thro a browser.  
+PS: If U want to run JS code without a browser, U should use NODEJS.
+JS is not a compiler based language, it is an interpreter language. The code is interpreted as Text and executed line by line.
+JS is the most popular Client side scripting language and is approved by all the browser vendors. W3C, an organization that defines the stds of Web Computing recommends JS as the default scripting language which all the browser vendors follow it.
+JS itself is maintained by a group of Computer organizations called ECMA(European Computer Manufactures Association). JS Interpretors designed as per the stds of ECMA called as as ES Compliant JS. Currently v8 is popular in the market. It is called ES8.
+How to write JS code?
+U could embedd the JS code under a script tag within an HTML Document. It is recommended that the script should be either placed in the header or at the end of the body tag.
+U could create JS files with extension .js and include those files inside the HTML Doc like U do a CSS file. The tag is script with src as its attribute.  
+
+Some of the UI based builtin methods of JS:
+alert: It is used to display a message to the user. 
+prompt: It is used to ask a Question to the user and get an answer in the form of string. 
+confirm: It is used to question the user and obtain the answer as OK or Cancel. 
+--------------------------------------------------
+Variables in JS:
+var is the keyword used to declare a variable in JS. There is no specific data type in JS. everything is var. JS does not make it mandatory to declare the variable before Use, but its a good practise. 
+typeof method is used to find the type of data that is stored in the variable. 
+When U declare a variable and refer it without initializing, it will be undefined.
+Write a JS program to ask the user, the name, address and salary and display the data as one single string...
+
+JS does not have any rule of ending a statement with a ;. However, if u declare multiple variables and assign them in the same line U should seperate them using ; 
+
+Operators: 
+JS supports most of the operators that are available in other programming languages:
++, -, *,/, % operators are same. 
+For equivalence, we have both ==(Value Comparison) as well as ===(Value and Type comparison).
+
+All the data entered within elements are plain text. To convert text to numbers u should parse them. parseInt and parseFloat are the methods used to convert strings to integers and float values respectively. + operator concatinates strings and adds numbers. 
+
+How to read and write data into html elements?
+document.getElementById is used to get the reference of the element by Id...
+data of the element is extracted in 3 ways:
+innerText and innerHTML for non input elements. 
+value for input elements.
+innerHTML will interpret the html tags within the text, innerText simply places the content. 
+    
+
+Arrays are used to store multiple sets of data to be represented by single variable. Arrays can be dynamic in JS. [] is used to assign and declare an array in JS. Items can be filled into the [] operator as initialization of the array. [] is like blank array. 
+push method of the array is used to add an item into the array
+splice method is used to remove or replace an item in the array.
+filter method is used to filter the elements of the array based on a condition. 
+find is similar to filter, but it returns single first matching record.
+
+When we include the JS code in our HTML Documents, we must ensure that the DOM Elements are placed properly and then we could use the Functions. Window object of the DOM has a function called addEventListener that can be used to map the events with our event handler functions. In this way, we could cleanly seperate the JS Code and the HTML UI block. This is called as UnObtrusive JS
+    

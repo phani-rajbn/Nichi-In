@@ -1,0 +1,14 @@
+body{
+	padding: 3px;
+	margin: 2px;
+	color: darkgreen;
+	background-color: lightgreen;
+	font-family: "Consolas";
+}
+div{
+	border: 2px solid lightyellow;
+	width: 30%;
+	display: inline-block;
+	height: 300px;
+	vertical-align: top;
+}

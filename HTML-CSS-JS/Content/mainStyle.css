@@ -1,0 +1,67 @@
+body{
+	color:blue;
+	background-color: lightblue;
+	margin: 5px;
+	padding: 5px; 
+	text-align: center;
+}
+h1, h2, h3{
+	font: Inconsolata;
+	font-size: 28pt;
+	text-align: center;
+	background-color: lightyellow;
+}
+.table{
+	padding:5px;
+	margin: 5px;
+	width: 50%;
+	display: block; 
+	background-color: yellow;
+}
+div.block{
+	width: 40%;
+	color: seagreen;
+	background-color: burlywood;
+	font-size: 16pt;
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+}
+
+a.edit{
+	background-color: lightblue	;
+
+}
+
+a{
+	display: inline;
+	padding:5px;
+	margin: 5px;
+	border-radius: 5px;
+	text-align: center;
+	background-color: rosybrown;
+}
+.prev{
+	float:left;
+}
+
+.next{
+	float: right;
+}
+
+a:hover{
+	background-color: green;
+}
+
+input,select/*[type=text] */{
+  width: 85%;
+  padding: 10px 15px;
+  margin: 10px;
+  box-sizing: border-box;
+  border: 2px solid green;
+  border-radius: 5px;
+}
+input:focus{
+	border:3px solid blue;
+	box-shadow: 5px 5px 10px green
+}

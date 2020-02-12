@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tables in HTML</title>
+</head>
+<body>
+	<header>
+	<a href="Formatting.html">Previous</a>
+	<a href="Forms.html">Next</a>
+</header>
+<h1>Tables in HTML</h1>
+<p>Presenting the data in the form of Rows and Columns is what makes Tables. Used to display tabular data like List of Employees, Customers, Billings etc. 
+	Starts with a table Tag, followed by each row represented as tr tag. Each tr will have either a td(TableData) or a th(TableHeader). Every td and tr has to have an ending tag. <br/>
+	Many a time, the presentation of the data into a Table would be dynamic which is done using any scripting language. 
+	<h2>A Simple table with static data</h2>
+	<table border="1">
+		<thead>
+			<tr>
+				<th colspan="4">List of Employees with Us</th>
+			</tr>
+			<tr>
+				<th>Employee ID</th>
+				<th>Employee Name</th>
+				<th>Employee Address</th>
+				<th>Employee Salary</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>123</td>
+				<td>Phaniraj</td>
+				<td>Bangalore</td>
+				<td>45000</td>
+			</tr>
+			<tr>
+				<td>124</td>
+				<td>Mahesh Kumar</td>
+				<td>Mysore</td>
+				<td>55000</td>
+			</tr>
+			<tr>
+				<td>125</td>
+				<td>Vinod Kumar</td>
+				<td>Shimoga</td>
+				<td>65000</td>
+			</tr>
+			<tr>
+				<td>126</td>
+				<td>Ramnath Nishad</td>
+				<td>Pune</td>
+				<td>40000</td>
+			</tr>
+			<tr>
+				<td>127</td>
+				<td>Krishna Murthy</td>
+				<td>Udupi</td>
+				<td>45000</td>
+			</tr>	
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="4">End of the List</td>
+			</tr>
+		</tfoot>
+	</table> 
+	<hr/>
+	&copy; Phaniraj-Nichi-In Training 2020
+</body>
+</html>

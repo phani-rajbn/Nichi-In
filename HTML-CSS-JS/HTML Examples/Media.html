@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Media Files in HTML</title>
+	<style type="text/css">
+		div{
+			width: 45%; 
+			display: inline-block; 
+			border: 2px solid red; 
+			border-radius: 5px;
+			vertical-align: top;
+		}
+	</style>
+</head>
+<body>
+<h1>Media usage in HTML5</h1>
+<p>
+	Since HTML5, media files like Audio and Video can now be placed in HTML documents without a need for any external media players lile Flash and Silverlight. These are the new features of HTML5 which is supported only by the latest browsers. <br/>
+	HTML has video tag that can be used to play a video inside a HTML Document...
+	<br/>
+	Currently the Following formats are only supported in HTML5:
+	<table border="1">
+		<tr>
+			<th>Video File Format</th>
+			<th>Media Type</th>
+		</tr>
+		<tr>
+			<td>.mp4</td>
+			<td>video/mp4</td>
+		</tr>
+		<tr>
+			<td>.ogg</td>
+			<td>video/ogg</td>
+		</tr>
+		<tr>
+			<td>.webM</td>
+			<td>video/webM</td>
+		</tr>
+	</table>
+</p>
+<div>
+	<h2>Playing a video</h2>
+	<video width="480" height="300" controls="false">
+		<source src="Docker.mp4" type="video/mp4">
+	</video>
+</div>
+<!-- <marquee>Playing the Audio</marquee> -->
+<div>
+	<h2>Playing an audio</h2>
+	<audio controls>
+		<source src="" type="audio/mp3">
+	</audio>
+</div>
+</body>
+</html>
