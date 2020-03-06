@@ -1,0 +1,149 @@
+Question paper for C#.NET
+
+Objective type Questions:(20x1=20)
+1. Which interface is implemented by any LINQ query variable?
+a.	IEnumerable
+b.	ICollection
+c.	ICompare
+d.	All the Above.
+
+2. Net application is created in Visual Studio.Net with the solution name App1.Sln. The name of the project file is Proj1.prj. The namespace (only one namespace) used by the application is Application1. Now, when you build the solution, an exe file is created as ------------------------.exe 
+a.App1.Exe
+b.Proj1.Exe
+c.Application1.Exe
+d.Debug.Exe.
+
+3.What is managed code? 
+a. Code that has its execution managed by the .NET Framework Common Language Runtime.
+b. Code that has it execution managed by the JIT compiler
+c. Code that has it execution managed by the Language compiler
+
+4.From which one of the following classes do all members of the .NET Framework Class Library derive?   
+a. System.Machine 
+b. System.Windows
+c. System.Object 
+d. System.Data 
+
+5. Which of these classes are not required for Connected Data Model?
+a. SqlCommand
+b. SqlDataAdapter
+c. SqlConnection
+d. SqlDataReader
+
+6. What is the default version of an assembly? 
+a. 1:0:0:1
+b. 1:0:1:0
+c. 1:1:0:0
+d. 1:0:0:0
+
+7. While performing debugging with the help of breakpoints, after stopped at a breakpoint, what key is pressed to continue running the application?
+a. F1
+b. F2
+c. F3
+d. F5
+
+8. Which of the following helps in finding the methods of an assembly file? 
+a.IL Disassembler
+b.Reflection.
+c.Answer 1 & 2. 
+d.None Above.
+
+9. What Solution does .NET provide for the DLL HELL problem?
+a.Garbage Collection.
+b.Cyclical Reference.
+c.Assembly Versioning. 
+d.None Above
+
+10.Memory allocation/Deallocation is performed by…….
+a.Free
+b.Runtime Collector
+c.Garbage Collector
+d.Destructor
+
+11.Side-By-Side execution is allowed in .NET [True/False]
+
+12.Which of these statements correctly declares a two-dimensional array in C#?
+a. int[,] myArray; 
+b. int[][] myArray; 
+c. int[2] myArray; 
+d. System.Array[2] myArray;
+
+13.Which of the following statements is true in case of an Interface?. 
+a. Each class that includes an interface must implement all of the methods
+b. An Interface can contain only Implementation and no Abstract methods at all. 
+c. An Interface can contain only Abstract methods and no Implementation at all. 
+d. Answer 1 & 3
+
+14.You can get the Type object of a class using: 
+a. The typeof() operator 
+b. The GetType() method
+c. The Type() operator
+d. The IsType() method
+
+15.Which is the class, which cannot be inherited? 
+a. virtual
+b. base
+c. sealed
+d. derived
+
+16.Is it possible to use a function's name as local variable inside the procedure? [TRUE/FALSE]
+
+17.After stopping at a breakpoint, what key do is used to continue running application ONE LINE AT A TIME in a stepping in manner? 
+a. F11
+b. F10
+c. F5
+d. F4
+
+18.You develop a Windows-based application that enables to enter product sales. You add a subroutine named TestKing. You discover that TestKing sometimes raises an IOException during execution. To address this problem you create two additional subroutines named LogError and CleanUp. These subroutines are governed by the following rules: 
+LogError must be called only when TestKing raises an exception. 
+CleanUp must be called whenever TestKing is complete. 
+You must ensure that your application adheres to these rules. Which code segment should you use?
+a)	try { TestKing(); LogError(); } catch (Exception e) { CleanUp(e); }
+b)	try { TestKing(); } catch (Exception e) { LogError(e); CleanUp(); } 
+c)	try { TestKing(); } catch (Exception e) { LogError(e); } finally { CleanUp(); } 
+d)	try { TestKing(); } catch (Exception e) { CleanUp(e); } finally { LogError(); } 
+
+19.Which of the following statement is Incorrect?
+a)Virtual methods can be over-ridden in a derived class
+b)Abstracts methods can be over-ridden in a derived class
+c)Protected methods can be over-riden  in a derived class
+1. a
+2. b
+3. c
+4. a,b,c
+
+20.How do you return more than one value in a function? 
+a. using return keyword
+b. using multiple return keywords
+c. using out and ref parameters
+d. not possible
+
+21. You execute a query on your external Oracle database named TestKingSalesDate by using an OleDbCommand object. The query uses the Average function to return a single value that represents the average price of products in the inventory table. You want to optimize performance when you execute this query. To execute this query from your ADO.NET code, you need to use a method of the OleDbCommand object. Which method should you use? 
+i.	ExecuteNonQuery 
+ii.	ExecuteScalar 
+iii.ToString 
+iv.	ExecuteReader
+
+22.Which of these is the class of disconnected model of DataAccess
+i.	Dataset
+ii.	DataReader
+iii.	DataCommand
+iv.	DataConnection
+
+23.Which of these are true with Stored Procedures
+i	They are predefined Functions that are created for C# Applications
+ii.	They are predefined functions for managing Databases
+iii.	Functions created by developer for performing commonly used Operations.
+iv.	Functions created to be used by .NET Developers.
+
+24. Which delegate is used by the Thread to associate a Thread function?
+a. ThreadStart
+b. ThreadPool
+c. WaitCallBack
+d. AsycCallBack
+
+25. Which of the following Statements are TRUE? 
+1.	In the case of ADO.net, since the dataset is in the XML format, no data type conversion is required.
+2.	ADO connects to a database through an SQL provider.
+3.	Data Reader is used to get read-only and forward only data from the data Source
+4.	All Above
