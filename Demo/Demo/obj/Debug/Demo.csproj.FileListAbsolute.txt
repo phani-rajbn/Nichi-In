@@ -1,0 +1,6 @@
+C:\Users\phani\source\repos\Demo\Demo\bin\Debug\Demo.dll
+C:\Users\phani\source\repos\Demo\Demo\bin\Debug\Demo.pdb
+C:\Users\phani\source\repos\Demo\Demo\obj\Debug\Demo.csprojAssemblyReference.cache
+C:\Users\phani\source\repos\Demo\Demo\obj\Debug\Demo.csproj.CoreCompileInputs.cache
+C:\Users\phani\source\repos\Demo\Demo\obj\Debug\Demo.dll
+C:\Users\phani\source\repos\Demo\Demo\obj\Debug\Demo.pdb
