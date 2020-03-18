@@ -1,0 +1,6 @@
+Develop an Application in Console environment that stores inputs of data into a database using connected model and perform all the CRUD operations from it.
+Develop an Application in Console environment that stores inputs of data into a CSV file and U should be able to read the data from the CSV file. 
+Create a DLL that has an interface and a class that implement the interface. Expose the class object using Factory pattern.
+Create a Windows Forms App that consumes the dll created and call the methods and develop the User interface using User control. 
+Create an ASP.NET MVC App that performs CRUD operations in the database using LINQ To SQL. 
+Create a SPA using Ajax feature in ASP.NET MVC that performs Math operations as a Calc Program.  
