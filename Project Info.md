@@ -20,7 +20,7 @@ Integrate the Service layer into the MVC application.<br/>
 Test run the First User case. <br/>
 Do integration Testing on the First User case. <br/>
 
-#8th May 2020
+# 8th May 2020
 For Login Page, use the OAuth authentication(Facebook, Google or Twitter)<br/>
 UI Development should continue.<br/>
 Ajay will interact with me related to error by evening!!<br/>
