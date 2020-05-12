@@ -25,3 +25,31 @@ For Login Page, use the OAuth authentication(Facebook, Google or Twitter)<br/>
 UI Development should continue.<br/>
 Ajay will interact with me related to error by evening!!<br/>
 
+# 12th May 2020
+# Ajay Kumar:
+User interface pending.<br/> 
+Exception handling to be completed.<br/> 
+Login features to be explored using O-Auth. <br/> 
+Show me the Demo on 14th with 90% completion. <br/> 
+
+# Chethan:
+Editing details of Employees.<br/> 
+Employee should be able to see his own details and edit his own details.<br/>  
+Expecting the demo on 14th. <br/> 
+
+# Pavan:
+Resolve the Tables.<br/> 
+Resolve other Issues<br/> 
+
+# Madhu
+Waiting for pending results</br>
+
+# Manoj:
+Debugging to be done
+
+# Sachin:
+Pending the UI Design.
+Exceptions handing to be completed. 
+Service layer is completed.
+
+
