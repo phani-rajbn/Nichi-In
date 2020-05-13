@@ -52,4 +52,8 @@ Pending the UI Design.
 Exceptions handing to be completed. 
 Service layer is completed.
 
+# 13th May 2020.
+Madhu should design the UI design<br/>
+Manoj should complete the UI and business rules of User.<br/>
+Sachin should spend time of  UI design and completion<br/>
 
